@@ -45,3 +45,17 @@ fs.rename("./public/songs.txt", "./public/popsongs.txt", (err) => {
     console.log("File renamed successfully");
 })
 
+//deleting files
+fs.unlink("./public/popsongs.txt", (err) => {
+    if(err){
+        console.error(`Error : ${err}`); 
+        return
+    }
+    console.log("File deleted successfully");
+})
+
+
+//working with directories
+//we can also create, read and delete directories
+
+//creating a directory
