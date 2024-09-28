@@ -59,3 +59,36 @@ fs.unlink("./public/popsongs.txt", (err) => {
 //we can also create, read and delete directories
 
 //creating a directory
+fs.mkdir("private", (err) => {
+    if(err){
+        console.error(`Error : ${err}`);
+        return;   
+    }
+    console.log("Directory created successfully");
+})
+
+
+//reading from a directory
+fs.readdir("./public", (err, files) => {
+    if(err) {
+        console.error(`Error : ${err}`);  
+    }
+    console.log("Files in the directory: ", files);
+    
+})
+
+// deleting a directory/ removing a directory
+//rmdir()
+fs.rmdir("./private", (err) => {
+    if(err){
+        console.error(`Error : ${err}`);
+    }
+    console.log("Directory deleted successfully");
+})
+
+
+
+
+
+
+
