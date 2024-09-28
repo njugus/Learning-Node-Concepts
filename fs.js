@@ -34,3 +34,14 @@ fs.appendFile("./public/songs.txt", content + "\n", "utf-8", (err) => {
     console.log("Content added successfully");
     
 })
+
+
+//5. Renaming Files
+//You can rename or move files using fs.rename 
+fs.rename("./public/songs.txt", "./public/popsongs.txt", (err) => {
+    if(err){
+        console.error(`Error : ${err}`); 
+    }
+    console.log("File renamed successfully");
+})
+
